@@ -1,60 +1,85 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <title>sort_visual</title>
+<html lang="en">
 
-        <script src="libraries/p5.js"></script>
-        <script src="libraries/p5.dom.js"></script>
-        <script src="timer_algos.js"></script>
-        <script src="algorithms.js"></script>
-        <script src="sketch.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
 
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#" class="clickable">Algorithms</a>
-                    <ul>
-                        <li><a href="#" class="clickable" id="bubbleSort">Bubble Sort</a></li>
-                        <li><a href="#" class="clickable" id="selectionSort">Selection Sort</a></li>                        </li>
-                        <li><a href="#" class="clickable" id="mergeSort">Merge Sort</a></li>
-                        <li><a href="#" class="clickable" id="quickSort">Quick Sort</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href ="#">Data size</a>
-                    <input
-                        class="range-input"
-                        type="range"
-                        min="30"
-                        max="60"
-                        value="42"
-                        class="slider"
-                        id="data_size"
-                    />
-                </li>
-                <li>
-                    <a href="#">Speed</a>
-                    <input
-                        class="range-input"
-                        type="range"
-                        min="0"
-                        max="40"
-                        value="40"
-                        class="slider"
-                        id="frm"
-                    />
-                </li>
-                <li><a href="#" id="time">Time: -- </a></li>
-                <li><a href="#" class="clickable" id="reset">Reset</a></li>
-                <li><a href="https://github.com/shubh67678/sorting-visualizer.git" class="clickable" >Source Code</a></li>
-            </ul>
-        </nav>
-    </body>
+  <link rel="shortcut icon" type="image/x-icon" href="ALGORITHM.png" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Algorithm visualizer</title>
+</head>
+
+<body>
+  <div class="nav-container">
+    <h2 class="title" onclick="window.location.reload()">
+      Algorithm visualizer
+      <!--<link class="title" rel="Logo" type="Image/x-icon" href="Logo.png"> -->
+    </h2>
+    <div class="navbar" id="navbar">
+      <a id="random" onclick="RenderScreen()">Generate array</a>
+      <span class="options">
+        <select name="select sort algorithm" id="menu" class="algo-menu">
+          <option value="0">Choose algorithm</option>
+          <option value="1">Bubble Sort</option>
+          <option value="2">Selection Sort</option>
+          <option value="3">Insertion Sort</option>
+          <option value="4">Merge Sort</option>
+          <option value="5">Quick Sort</option>
+        </select>
+      </span>
+      <span class="options">
+        <select name="select array size" id="menu" class="size-menu">
+          <option value="0">Array size</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+          <option value="60">60</option>
+          <option value="70">70</option>
+          <option value="80">80</option>
+          <option value="90">90</option>
+          <option value="100">100</option>
+        </select>
+      </span>
+      <span class="options">
+        <select name="speed of visualization" id="menu" class="speed-menu">
+          <option value="0">Speed</option>
+          <option value="0.5">0.50x</option>
+          <option value="0.75">0.75x</option>
+          <option value="1">1.00x</option>
+          <option value="2">2.00x</option>
+          <option value="4">4.00x</option>
+        </select>
+      </span>
+      <a class="start">Sort</a>
+      <a class="icon"><i class="fa fa-bars"></i></a>
+    </div>
+  </div>
+  <div class="center">
+    <div class="array"></div>
+  </div>
+  <footer class="footer">
+   <!-- <p>Created with <i class="fa fa-heart"></i> by Akshay & Gaurav</p> -->
+   <!-- <p>
+      <a href="https://www.linkedin.com/in/akshay-mule-287811218/" target="_blank" class="link">
+        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+      </a>
+      <a href="https://github.com/aksxy" target="_blank" class="link">
+        <i class="fa fa-github" aria-hidden="true"></i>
+      </a>
+    </p> -->
+  </footer>
+  <script src="./scripts/app.js"></script>
+  <script src="./scripts/helper.js"></script>
+  <script src="./scripts/sort-algorithms.js"></script>
+</body>
+
 </html>
