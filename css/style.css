@@ -1,0 +1,262 @@
+
+* {
+  /* Below is the standard CSS code one should add to get rid of default margins and padding which most of tge HTML elements have */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+}
+body {
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: stretch;
+  
+}
+
+/* Title CSS */
+.title {
+  /*background-color: black;   var(--primary-color) */
+  background: rgb(9,110,190);
+  background: linear-gradient(90deg, rgba(9,110,190,1) 10%, rgba(224,34,146,1) 100%);
+}
+
+
+/* Navbar CSS */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  font-size: 16px;
+  min-height: 70px;
+  padding-block: 0.6em;
+  /* background-color:  */
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  position: relative;
+  bottom: 20px;
+}
+.text{
+  position: relative;
+  bottom: 36px;
+  color: white;
+}
+.navbar a {
+  all: unset;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+  background: rgb(9,110,190);
+  background: linear-gradient(90deg, rgba(9,110,190,1) 10%, rgba(224,34,146,1) 100%);
+}
+.navbar a:hover {
+  background-color: transparent;
+}
+.navbar #menu {
+  width: fit-content;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 8px;
+  background-color: rgb(9,110,190);
+  color: white;
+}
+.navbar > .icon {
+  display: none;
+}
+#menu,
+#random,
+#start {
+  cursor: pointer;
+}
+
+/* Center css */
+.center {
+  margin: 0 auto;
+  /*box-shadow: black; /* Added shadow to make page border free */
+  height: 510px;
+  width: 600px;
+  max-height: 731px;
+  position: relative;
+  bottom: 25px;
+  background-color: black ;
+  opacity: 100%;
+  border-radius: 0px 0px 15px 15px;
+  
+}
+.array {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100%;
+  height: 100%;
+  padding: 1rem;
+  flex-direction: row;
+}
+.cell {
+  display: flex;
+  align-items: flex-start;
+  flex: 0.5;
+  width: 0.010000%;
+  margin: 1px;
+  background-color: white;
+  resize: horizontal;
+  position: relative;
+  transition: all 0.4s ease-in;
+  
+}
+.cell.done {
+  background-color: #9cec5b;
+  border-color: #9cec5b;
+  color: white;
+  transition: all 0.4s ease-out;
+}
+.cell.visited {
+  border-color: #6184d8;
+  background-color: #6184d8;
+  color: white;
+  transition: 0.5s;
+}
+.cell.current {
+  border-color: #50c5b7;
+  background-color: #50c5b7;
+  color: white;
+  transition: all 0.4s ease-out;
+}
+.cell.min {
+  background-color: #ff1493;
+  border-color: #ff1493;
+  color: white;
+  transition: all 0.4s ease-out;
+}
+
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    gap: 0.4em;
+  }
+  .title {
+    font-size: 17px;
+  }
+  .navbar *,
+  .navbar a {
+    font-size: 14px;
+  }
+  .footer {
+    font-size: 18px;
+  }
+  a#random {
+    order: 4;
+  }
+  a.start {
+    order: 5;
+  }
+}
+@media screen and (max-width: 550px) {
+  .center {
+    width: 95%;
+  }
+}
+.blackbox{
+
+  width: 200px;
+  height: auto;
+  background-color: black;
+}
+/*.blackbox{
+    
+  width: 1000px;
+  height: 500px;
+  padding: 50px;
+  background-color: black;
+  opacity: 50%;
+  border-radius: 20px;
+ 
+  
+      }*/
+
+
+.imgsize{
+  height: 30px;
+  width: 30px;
+  position: relative;
+  right: 610px;
+  top: 5px;
+}
+/*
+#sign{
+         position: relative;
+         left: 600px;
+         bottom: 6px;
+         height: 30px;
+         width: 70px;
+         background: rgba(9,110,190,1);
+         border: none;
+         border-radius: 5px;
+         color: white;
+
+} */
+
+.footer-distributed {
+  /*background-color: #292c2f;*/
+  background: rgb(9,110,190);
+  /*background: linear-gradient(90deg, rgba(9,110,190,1) 10%, rgba(224,34,146,1) 100%); */
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  height: -5px;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 25px 25px;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: -45px;
+  max-width: 180px;
+  position: relative;
+  bottom: -30px;
+  right: 560px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: black;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 7px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+
+
